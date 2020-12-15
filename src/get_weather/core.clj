@@ -3,9 +3,9 @@
   (:require [clj-http.client :as client])
   (:require [cheshire.core :refer :all]))
 
-(def APPID (io/resource "APPID.txt"))
+(def APPID (io/file (io/resource "APPID.txt")))
 
-(def city-name "Moscow")
+(def city-name "Rexburg")
 
 (defn -main []
   (let* [URL (str (format "https://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=" city-name) (slurp APPID))
