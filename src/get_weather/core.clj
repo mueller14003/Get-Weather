@@ -7,7 +7,7 @@
 
 (def city-name "Rexburg")
 
-(defn -main []
+(defn -main [& args]
   (let* [URL (str (format "https://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=" city-name) (slurp APPID))
          weather-JSON (get (client/get URL {:as :json-strict}) :body)]
     (let [temp (get (get weather-JSON :main) :temp)
