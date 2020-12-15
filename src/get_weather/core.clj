@@ -14,4 +14,4 @@
           weather (get (get (get weather-JSON :weather) 0) :description)
           wind (get (get weather-JSON :wind) :speed)
           city (get weather-JSON :name)]
-      (println (format "In %s it's %s°F with %s and %s mph winds." city temp weather wind)))))
+      (println (format "In %s it's %s F with %s and %s mph winds." city temp weather wind)))))
