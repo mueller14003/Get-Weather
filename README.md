@@ -28,4 +28,6 @@ Once you have Leiningen installed, open a terminal, navigate to the project dire
 
 ## Options
 
-To change the city that you would like to see the weather data for, navigate to src/get_weather/core.clj and change the city-name variable according to your preference.
+To see weather data for a city other than the default (Rexburg), enter the city as a command-line argument like so:
+
+    $ lein run Salt Lake
